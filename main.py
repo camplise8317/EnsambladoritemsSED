@@ -70,6 +70,11 @@ Eres un experto en evaluación educativa con un profundo conocimiento de la peda
 - Aprendizaje Priorizado: {fila.get('AfirmacionNombre', '')}
 - Evidencia de Aprendizaje: {fila.get('EvidenciaNombre', '')}
 - Grado Escolar: {fila.get('ItemGradoId', '')}
+- Respuesta correcta: {fila.get('AlternativaClave', 'No aplica')}
+- Opción A: {fila.get('OpcionA', 'No aplica')}
+- Opción B: {fila.get('OpcionB', 'No aplica')}
+- Opción C: {fila.get('OpcionC', 'No aplica')}
+- Opción D: {fila.get('OpcionD', 'No aplica')}
 
 📝 INSTRUCCIONES PARA EL ANÁLISIS DEL ÍTEM
 Genera el análisis del ítem siguiendo estas reglas y en el orden exacto solicitado:
@@ -85,9 +90,9 @@ Para cada una de las TRES opciones incorrectas, explica el posible razonamiento 
 
 📘 CRITERIO COGNITIVO SEGÚN NIVEL DE LECTURA
 (Debes usar estos verbos para fundamentar la "Ruta Cognitiva Correcta")
--   **Lectura Literal:** reconocer, señalar, localizar, nombrar, enumerar, identificar, clasificar, relacionar, describir.
--   **Lectura Inferencial:** inferir, interpretar, predecir, deducir, completar, explicar, formular, estimar, comparar, sintetizar.
--   **Lectura Crítica:** analizar, cuestionar, contrastar, evaluar, justificar, opinar, argumentar, valorar, proponer.
+-   **Lectura Literal:** reconocer, señalar, localizar, nombrar, enumerar, identificar, clasificar, relacionar, describir.
+-   **Lectura Inferencial:** inferir, interpretar, predecir, deducir, completar, explicar, formular, estimar, comparar, sintetizar.
+-   **Lectura Crítica:** analizar, cuestionar, contrastar, evaluar, justificar, opinar, argumentar, valorar, proponer.
 
 ✍️ FORMATO DE SALIDA DEL ANÁLISIS
 **REGLA CRÍTICA:** Responde únicamente con el texto solicitado y en la estructura definida a continuación. Es crucial que los tres títulos aparezcan en la respuesta, en el orden correcto. No agregues introducciones, conclusiones ni frases de cierre.
@@ -99,9 +104,7 @@ Ruta Cognitiva Correcta:
 Descripción concisa y paso a paso del proceso cognitivo. Debe estar escrita como un parrafo continuo y no como una lista
 
 Análisis de Opciones No Válidas:
-- El estudiante podría escoger la opción [Letra] porque [razonamiento erróneo]... sin embargo, esto es incorrecto porque [razón].
-- El estudiante podría escoger la opción [Letra] porque [razonamiento erróneo]... sin embargo, esto es incorrecto porque [razón].
-- El estudiante podría escoger la opción [Letra] porque [razonamiento erróneo]... sin embargo, esto es incorrecto porque [razón].
+- El estudiante podría escoger la [opción] porque [razonamiento erróneo]. Sin embargo, esto es incorrecto porque [razón].
 """
 
 def construir_prompt_recomendaciones(fila):
