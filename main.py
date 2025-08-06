@@ -80,10 +80,10 @@ Eres un experto en evaluación educativa con un profundo conocimiento de la peda
 Genera el análisis del ítem siguiendo estas reglas y en el orden exacto solicitado:
 
 ### 1. Qué Evalúa
-Basándote en la Competencia, el Aprendizaje Priorizado y la Evidencia, redacta una frase concisa y clara (1-2 renglones) que resuma la habilidad específica que el ítem está evaluando. Debes comenzar la frase obligatoriamente con "Este ítem evalúa la capacidad del estudiante para...".
+Basándote en la Competencia, el Aprendizaje Priorizado y la Evidencia, redacta una frase concisa y clara (1-2 renglones) que resuma la habilidad específica que el ítem está evaluando. Debes comenzar la frase obligatoriamente con "Este ítem evalúa la capacidad del estudiante para...". Esta frase no debe ser demasiado especifica al item sino tener generalidad suficiente para la competencia, aprendizaje y evidencia.
 
 ### 2. Ruta Cognitiva Correcta
-Describe el paso a paso lógico y cognitivo que un estudiante debe seguir para llegar a la respuesta correcta. La explicación debe ser clara y basarse en los verbos del `CRITERIO COGNITIVO` que se define más abajo.
+Describe de forma impersonal el procedimiento o el paso a paso lógico y cognitivo que un estudiante debe seguir para llegar a la respuesta correcta. La explicación debe ser clara y basarse en los verbos del `CRITERIO COGNITIVO` que se define más abajo.
 
 ### 3. Análisis de Opciones No Válidas
 Para cada una de las TRES opciones incorrectas, explica el posible razonamiento erróneo del estudiante. Describe la confusión o el error conceptual que lo llevaría a elegir esa opción y luego clarifica por qué es incorrecta.
@@ -101,10 +101,10 @@ Qué Evalúa:
 [Frase concisa de 1-2 renglones.]
 
 Ruta Cognitiva Correcta:
-Descripción concisa y paso a paso del proceso cognitivo. Debe estar escrita como un parrafo continuo y no como una lista
+Descripción concisa y paso a paso del proceso cognitivo. Debe estar escrita como un parrafo continuo y no como una lista. Debe estar escrito de forma impersonal.
 
 Análisis de Opciones No Válidas:
-- El estudiante podría escoger la [opción] porque [razonamiento erróneo]. Sin embargo, esto es incorrecto porque [razón].
+- El estudiante podría escoger la [opción] posiblemente porque [razonamiento erróneo]. Sin embargo, esto es incorrecto porque [razón].
 """
 
 def construir_prompt_recomendaciones(fila):
@@ -133,40 +133,41 @@ Eres un experto en evaluación educativa con un profundo conocimiento de la peda
 Para cada ítem, genera dos recomendaciones claras y accionables, siguiendo los siguientes criterios:
 
 ### General:
-Las actividades deben ser cortas, puntuales y de fácil implementación, concentrándose en un solo proceso cognitivo específico. La progresión entre "Fortalecer" y "Avanzar" debe ser clara y coherente. **IMPORTANTE: Las actividades deben centrarse exclusivamente en procesos de lectura y comprensión, sin incluir componentes de escritura, producción textual o similares.**
+Las actividades deben ser puntuales y de fácil implementación, concentrándose en un solo proceso cognitivo específico. La progresión entre "Fortalecer" y "Avanzar" debe ser clara y coherente. "Fortalecer" debe hacer referencia a la tarea o proceso cognitivo que se evalúa en el ítem, pero sin hacer referencia explícita al ítem. "Avanzar", en cambio, debe hacer referencia a un proceso cognitivo de mayor nivel. Es decir, si el ítem evalúa lectura literal, "Avanzar" debe proponer una actividad que se refiere a la lectura inferencial. En el caso de la lectura crítica, "Avanzar" debe hacer referencia a otro proceso cognitivo de la lectura crítica que implique una mayor complejidad. **IMPORTANTE: Las actividades deben centrarse exclusivamente en procesos de lectura y comprensión, sin incluir componentes de escritura, producción textual o similares. No nombres ni le pongas un título a las actividades.**
 
 ### 1. Recomendación para FORTALECER
 - **Objetivo:** Reforzar un único proceso cognitivo básico esencial para la resolución del ítem.
-- **Identificación de Verbos Clave:** Deducir verbos de procesos cognitivos de nivel simple 
+- **Identificación de Verbos Clave:** Deducir verbos de procesos cognitivos que se encuentra en la sección 'CRITERIO COGNITIVO SEGÚN NIVEL DE LECTURA'
 - **Párrafo Inicial:** Describe la estrategia didáctica general.
-- **Actividad Propuesta:** Diseña una actividad corta, puntual y de fácil implementación que sea novedosa, creativa y divertida. Debe ser lúdica, significativa y profundamente contextualizada . La actividad debe centrarse en el proceso cognitivo principal a fortalecer, utilizando herramientas a mano del docente y sin requerir preparación logística extensa o la gestión de proyectos complejos.  **Exclusivamente de lectura, sin escritura.**
-- **La actividad Propuesta NO debe ser demasiado específica y hablar acerca del contenido del ítem analizado. Debe ser pensado sobre lecturas mas generales.
+- **Actividad Propuesta:** Diseña una actividad corta, puntual y de fácil implementación que sea novedosa, creativa y divertida. Debe ser significativa y profundamente contextualizada . La actividad debe centrarse en el proceso cognitivo principal a fortalecer, utilizando herramientas a mano del docente y sin requerir preparación logística extensa o la gestión de proyectos complejos.  **Exclusivamente de lectura, sin escritura.**
+- **La actividad Propuesta NO debe ser demasiado específica y hablar acerca del contenido del ítem analizado. Debe ser pensado sobre lecturas más generales.
 - **La actividad Propuesta NO debe tener nada de producción escrita ni de creación de contenidos. Debe enfocarse en lectura.
 - **Preguntas Orientadoras:** Formula preguntas que guíen el proceso cognitivo.
 
 ### 2. Recomendación para AVANZAR
 - **Objetivo:** Desarrollar un único proceso cognitivo de nivel más complejo.
-- **Identificación de Verbos Clave:** Deducir verbos de procesos cognitivos de mayor nivel 
-- **Párrafo Inicial:** Describe la estrategia general para complejizar el aprendizaje.
-- **Actividad Propuesta:** Crea una actividad corta, puntual y de fácil implementación, totalmente diferente a la de fortalecer, con desafíos intelectuales estimulantes y atractivos. Integra elementos de la actualidad. La actividad debe centrarse en el proceso cognitivo principal a desarrollar, utilizando herramientas a mano del docente y sin requerir preparación logística extensa o la gestión de proyectos complejos.  **Exclusivamente de lectura y comprensión, sin producción textual, obras de teatro o similares.**
+- **Identificación de Verbos Clave:** Deducir verbos de mayor nivel de procesos cognitivos que se encuentra en la sección 'CRITERIO COGNITIVO SEGÚN NIVEL DE LECTURA'
+- **Párrafo Inicial:** Describe la estrategia general para complejizar el aprendizaje. Debe iniciar con "Para fortalecer la habilidad de" e incluir el proceso cognitivo identificado para el ítem en la sección "Qué evalúa". He aquí un ejemplo de cómo debe ser ese párrafo inicial: Para fortalecer la habilidad de inferir la función que cumplen las partes de un texto informativo para darle un sentido global, se sugiere al docente implementar una estrategia que visibilice las conexiones lógicas entre párrafos de un texto.  
+- **Actividad Propuesta:** Crea una actividad corta, puntual y de fácil implementación, totalmente diferente a la de fortalecer, con desafíos intelectuales estimulantes y atractivos. Integra elementos de la actualidad. La actividad debe centrarse en el proceso cognitivo principal a desarrollar, utilizando herramientas a mano del docente y sin requerir preparación logística extensa o la gestión de proyectos complejos.  **Exclusivamente de lectura y comprensión, sin producción textual, obras de teatro o similares.** 
 - **La actividad Propuesta NO debe ser demasiado específica y hablar acerca del contenido del ítem analizado. Debe ser pensado sobre lecturas mas generales.
 - **La actividad Propuesta NO debe tener nada de producción escrita ni de creación de contenidos. Debe enfocarse en lectura.
+- **He aquí un ejemplo de una actividad propuesta: El docente puede dividir a los estudiantes en parejas y entregarle a cada una un sobre con varios párrafos de una crónica breve o noticia de interés local, impresas en tarjetas. Una de las tiras, marcada con una estrella, contiene una afirmación general (ej. "El nuevo parque transformó el barrio"). La tarea de los estudiantes es leer todas las tarjetas y encontrar aquella que cumple con funciones específicas (ej. “Explicar una causa de un problema”, “Presentar la tesis”, etc.). 
 - **Preguntas Orientadoras:** Formula preguntas que progresen en dificultad.
 
 📘 CRITERIO COGNITIVO SEGÚN NIVEL DE LECTURA
 Identifica el nivel de lectura a partir del campo "Componente" y selecciona los **verbos cognitivos adecuados** de las siguientes listas. Para **FORTALECER**, elige uno de los verbos más simples del nivel correspondiente. Para **AVANZAR**, selecciona un verbo más elaborado del mismo nivel, asegurando una progresión clara.
 
-1.  **Lectura Literal** (nivel bajo):
-    -   Verbos de menor complejidad (FORTALECER): reconocer, señalar, localizar, nombrar, enumerar, identificar.
-    -   Verbos de mayor complejidad (AVANZAR): clasificar, relacionar, describir. 
+1.  **Lectura Literal** (nivel bajo):
+    -   Verbos de menor complejidad (FORTALECER): reconocer, señalar, localizar, nombrar, enumerar, identificar, describir.
+    -   Verbos de mayor complejidad (AVANZAR): clasificar, relacionar, sintetizar.
 
-2.  **Lectura Inferencial** (nivel medio):
-    -   Verbos de menor complejidad (FORTALECER): inferir, interpretar, predecir, deducir, completar.
-    -   Verbos de mayor complejidad (AVANZAR): explicar, formular, estimar, comparar, sintetizar.
+2.  **Lectura Inferencial** (nivel medio):
+    -   Verbos de menor complejidad (FORTALECER): inferir, interpretar, deducir.
+    -   Verbos de mayor complejidad (AVANZAR): analizar, inferir, contrastar, concluir.
 
-3.  **Lectura Crítica** (nivel alto):
-    -   Verbos de menor complejidad (FORTALECER): analizar, cuestionar, contrastar.
-    -   Verbos de mayor complejidad (AVANZAR): evaluar, justificar, opinar, argumentar, valorar, proponer.
+3.  **Lectura Crítica** (nivel alto):
+    -   Verbos de menor complejidad (FORTALECER): evaluar, justificar, argumentar, valorar.
+    -   Verbos de mayor complejidad (AVANZAR): evaluar, justificar, argumentar.
 
 ✍️ FORMATO DE SALIDA DE LAS RECOMENDACIONES
 **IMPORTANTE: Responde de forma directa y concreta. No incluyas frases de cierre, resúmenes, reflexiones pedagógicas ni conclusiones al final de cada recomendación (Fortalecer y Avanzar). Termina directamente con la lista de preguntas.**
@@ -174,7 +175,7 @@ Identifica el nivel de lectura a partir del campo "Componente" y selecciona los 
 Las recomendaciones deben presentarse con la siguiente estructura y tono de redacción para cada apartado (Fortalecer y Avanzar):
 
 RECOMENDACIÓN PARA [FORTALECER/AVANZAR] EL APRENDIZAJE EVALUADO EN EL ÍTEM
-Para [Fortalecer/Avanzar] la habilidad de [verbo clave] en situaciones relacionadas con [frase del aprendizaje priorizado], se sugiere al docente [descripción concreta de la sugerencia].
+Para [Fortalecer/Avanzar] la habilidad de [verbo clave] en situaciones relacionadas con [frase del aprendizaje priorizado], se sugiere [descripción concreta de la sugerencia].
 Una actividad que se puede hacer es: [Descripción detallada de la actividad].
 Las preguntas orientadoras para esta actividad, entre otras, pueden ser:
 - [Pregunta 1]
