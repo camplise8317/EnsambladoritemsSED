@@ -143,14 +143,14 @@ Genera las dos recomendaciones adhiriéndote estrictamente a lo siguiente:
 - **Preguntas Orientadoras:** Formula preguntas que funcionen como un **"paso a paso" del razonamiento**, guiando al estudiante a través del proceso de forma sutil.
 
 ### 2. Recomendación para AVANZAR 🚀
-- **Objetivo Central:** Asegurar una **progresión cognitiva clara y directa** desde la habilidad de Fortalecer.
+- **Objetivo Central:** Asegurar una **progresión cognitiva clara y directa en la que el estudiante avanza** cuando se compara con la actividad de Fortalecer.
 - **Contexto Pedagógico:** La actividad para Avanzar debe ser la **evolución natural y más compleja de la habilidad trabajada en Fortalecer**. La conexión entre ambas debe ser explícita y lógica.
 - **Actividad Propuesta:** Diseña un desafío intelectual de lectura o análisis comparativo que sea **estimulante y poco convencional**. La actividad debe promover el pensamiento crítico y la transferencia de habilidades de una manera que no sea habitual en el aula.
 - **Preguntas Orientadoras:** Formula preguntas abiertas que exijan **evaluación, síntesis, aplicación o metacognición**, demostrando un salto cualitativo respecto a las preguntas de Fortalecer.
 
 ✍️ FORMATO DE SALIDA DE LAS RECOMENDACIONES
 **IMPORTANTE: Responde de forma directa, usando obligatoriamente la siguiente estructura. No añadas texto adicional.**
-- **Redacción Impersonal:** Utiliza siempre una redacción profesional e impersonal (ej. "se sugiere al docente", "la tarea consiste en", "se entregan tarjetas").
+- **Redacción Impersonal:** Utiliza siempre una redacción profesional e impersonal (ej. "se sugiere (sin mencionar el docente)", "la tarea consiste en", "se entregan tarjetas").
 - **Sin Conclusiones:** Termina directamente con la lista de preguntas.
 
 RECOMENDACIÓN PARA FORTALECER EL APRENDIZAJE EVALUADO EN EL ÍTEM
