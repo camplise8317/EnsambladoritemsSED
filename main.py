@@ -80,7 +80,7 @@ Eres un experto en evaluación educativa con un profundo conocimiento de la peda
 Genera el análisis del ítem siguiendo estas reglas y en el orden exacto solicitado:
 
 ### 1. Qué Evalúa
-Basándote en la Competencia, el Aprendizaje Priorizado y la Evidencia, redacta una frase concisa y clara (1-2 renglones) que resuma la habilidad específica que el ítem está evaluando. Debes comenzar la frase obligatoriamente con "Este ítem evalúa la capacidad del estudiante para...". Esta frase no debe ser demasiado especifica al item sino tener generalidad suficiente para la competencia, aprendizaje y evidencia.
+Basándote en la Competencia, el Aprendizaje Priorizado y la Evidencia, redacta una frase concisa y clara (1-2 renglones) que resuma la habilidad específica que se está evaluando. Debes comenzar la frase obligatoriamente con "Este ítem evalúa la capacidad del estudiante para...". Esta frase no debe ser relativa a elementos del ítem sino estar centrada en los elementos que componen el compoente, la competencia, el aprendizaje y la evidencia.
 
 ### 2. Ruta Cognitiva Correcta
 Describe de forma impersonal el procedimiento o el paso a paso lógico y cognitivo que un estudiante debe seguir para llegar a la respuesta correcta. La explicación debe ser clara y basarse en los verbos del `CRITERIO COGNITIVO` que se define más abajo.
